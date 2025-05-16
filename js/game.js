@@ -1,5 +1,3 @@
-console.log("Test element:", document.getElementById('test-div'));
-console.log("Theme toggle:", document.getElementById('theme-toggle'));
 
 
 document.addEventListener('DOMContentLoaded', function() {
