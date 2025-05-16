@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <style>
+        /* Temporary backup styles */
+        .start-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #4285F4, #34A853);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        .start-btn {
+            background: white;
+            color: #4285F4;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            margin-top: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="start-container">
+        <div class="game-title">
+            <h1>ROCK PAPER SCISSORS</h1>
+            <div class="icons">
+                <i class="fas fa-hand-rock"></i>
+                <i class="fas fa-hand-paper"></i>
+                <i class="fas fa-hand-scissors"></i>
+            </div>
+        </div>
+        <button class="start-btn" onclick="window.location.href='game.html'">
+            START GAME
+        </button>
+    </div>
+
+    <script>
+        // Debug script
+        console.log("Index page loaded successfully");
+        if (!document.querySelector('.start-container')) {
+            console.error("Start container not found!");
+            document.body.innerHTML = '<h1 style="color:red">Error: Missing start container</h1>' + document.body.innerHTML;
+        }
+    </script>
+    
+    <!-- Moved scripts here right before closing body tag -->
+    <script src="js/timer.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
