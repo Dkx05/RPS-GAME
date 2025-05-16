@@ -1,3 +1,8 @@
+console.log("Test element:", document.getElementById('test-div'));
+console.log("Theme toggle:", document.getElementById('theme-toggle'));
+
+
+
 console.log("GAME.JS LOADED!"); 
 alert("JavaScript is working!");  
 
