@@ -2,6 +2,8 @@
 
 A modern, responsive Rock-Paper-Scissors game with animations, timer, and score tracking.
 
+🎮Game On! 🔗https://dkx05.github.io/RPS-GAME/
+
 ## Features ✨
 
 - 🎮 Classic Rock-Paper-Scissors gameplay
