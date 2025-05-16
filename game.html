@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <div class="match-count">Round: <span id="round">1/10</span></div>
+            <div class="timer">
+                <span id="time">10</span>s
+                <button id="pause-btn"><i class="fas fa-pause"></i></button>
+                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="player-section">
+                <h2>YOU</h2>
+                <div class="choices">
+                    <button class="choice-btn" data-choice="rock">
+                        <i class="fas fa-hand-rock"></i>
+                        <span>Rock</span>
+                    </button>
+                    <button class="choice-btn" data-choice="paper">
+                        <i class="fas fa-hand-paper"></i>
+                        <span>Paper</span>
+                    </button>
+                    <button class="choice-btn" data-choice="scissors">
+                        <i class="fas fa-hand-scissors"></i>
+                        <span>Scissors</span>
+                    </button>
+                </div>
+                <div class="choice-display" id="player-choice">
+                    <div class="placeholder">?</div>
+                </div>
+            </div>
+
+            <div class="vs">VS</div>
+
+            <div class="computer-section">
+                <h2>COM</h2>
+                <div class="choice-display" id="computer-choice">
+                    <div class="placeholder">?</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <div id="result-message">Choose your move!</div>
+            <div class="scores">
+                <div class="score-box">
+                    <span>YOU</span>
+                    <span id="player-score">0</span>
+                </div>
+                <div class="score-box">
+                    <span>COM</span>
+                    <span id="computer-score">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="history-container">
+            <h3>Game History <button id="clear-history">Clear</button></h3>
+            <div id="history-list"></div>
+        </div>
+    </div>
+
+    <div class="outcome-modal" id="outcome-modal">
+        <div class="outcome-content">
+            <img id="outcome-image" src="" alt="Outcome">
+            <h2 id="outcome-text"></h2>
+            <button id="next-round">Next Round</button>
+        </div>
+    </div>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="js/timer.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
+
